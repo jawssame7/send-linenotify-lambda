@@ -1,0 +1,1 @@
+# Line Notify にメッセージを送信するLambda側
