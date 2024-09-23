@@ -1,14 +1,14 @@
-const axios = require('axios');
+import axios from "axios";
 
 const url = process.env.LINE_NOTIFY_URL;
 const accessToken = process.env.LINE_NOTIFY_ACCESS_TOKEN;
 
 
-exports.handler = async (event) => {
+export const handler = async (event) => {
 
     try {
         const message = JSON.parse(event.body);
-        // const message = 'test';
+        // const message = 'test lambda 111111';
 
         const postMsg = await axios.post(
             url,
@@ -25,3 +25,5 @@ exports.handler = async (event) => {
 
     }
 };
+
+await handler();
