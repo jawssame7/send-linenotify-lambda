@@ -1,10 +1,7 @@
 const axios = require('axios');
 
-// const url = process.env.LINE_NOTIFY_URL;
-// const accessToken = process.env.LINE_NOTIFY_ACCESS_TOKEN;
-//
-// const url = 'https://notify-api.line.me/api/notify';
-// const accessToken = 'Fbii1czRfucUJqlMTJHx0rJe1kJsFHu97PkaSMQOhBZ';
+const url = process.env.LINE_NOTIFY_URL;
+const accessToken = process.env.LINE_NOTIFY_ACCESS_TOKEN;
 
 
 const handle = async (event) => {
