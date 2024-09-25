@@ -10,7 +10,14 @@ export const handler = async (event) => {
     body: JSON.stringify(event),
   };
   try {
+    if (!event) {
+      console.warn('Event is undefined!!!!!', event);
+      return response;
+    }
     const body = JSON.parse(event.body);
+    if (!body) {
+      return response;
+    }
     const message = body.message;
     if (!message) {
       return response;
